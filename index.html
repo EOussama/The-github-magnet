@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="application-name" content="The github magnet">
+        <meta name="author" content="Eoussama">
+        <meta name="description" content="A simple web application built on the github api, all it does is simple github profiles searchs and lays the result on a nice layout.">
+        <meta name="keywords" content="github, users, repositories">
+
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="styles/main.css">
+        <link rel="icon" type="image/png" href="images/logo.png">
+
+        <title>The github magnet</title>
+    </head>
+
+    <body>
+        <header>
+			<center>
+				<img src="images/logo.png" alt="The Github magnet logo">
+				<div id="logoShadow"></div>
+			</center>
+			<div class="slogan">
+				<h1>The github <span>magnet</span></h1>
+				<small>looking up github users has never been easier</small>
+			</div>
+		</header>
+		
+		<main>
+			<section id="searchBar">
+				<ul>
+					<li><input type="text" placeholder="Input a username here..." id="textBox"></li>
+					<li><i class="fas fa-search"></i></li>
+				</ul>					
+			</section>
+			
+			<section id="resultsPanel">
+			
+			</section>
+		</main>
+		<script src="scripts/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="scripts/main.js"></script>
+    </body>
+</html>
