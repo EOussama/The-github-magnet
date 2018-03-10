@@ -4,6 +4,11 @@
 	font-family: "Roboto", sans-serif;
 }
 
+:root {
+	--mainColor: #afd2f0;
+	--mainHover: #c5e4ff;
+}
+
 /*-------------------------------[Header]---------------------------------*/
 header {
 	width: 100%;
@@ -53,7 +58,7 @@ header .slogan { text-align: center; }
 #searchBar {
 	width: 100%;
 	height: 60px;
-	background-color: #afd2f0;
+	background-color: var(--mainColor);
 }
 
 #searchBar ul {
@@ -84,5 +89,101 @@ header .slogan { text-align: center; }
 	top: 5px;
 	left: -45px;
 	font-size: 30px;
-	color: #afd2f0;/*#9d9a99*/
+	color: var(--mainColor);
+}
+
+/*---------------------------------[Error panel]-----------------------------*/
+
+#resultsPanel, #errorPanel { display: none; }
+
+#errorPanel {
+	height: 100px;
+	width: 100%;
+	margin-top: 30px;
+	background-color: rgba(217, 95, 95, 0.49);
+	color: #c34343;
+	text-align: center;
+	border: 1px solid #c34343;
+	border-left: 0px;
+	border-right: 0px;
+}
+
+#errorPanel span {
+	color: #a22222;
+}
+
+#errorText {
+	margin: 35.4px 0px;
+}
+
+/*--------------------------------[Results panel]-----------------------------*/
+
+#resultsPanel {
+	width: 70%;
+	height: 315px;
+	margin: 20px auto;
+	background-color: aliceblue;
+	border: 1px solid var(--mainColor);
+	border-radius: 3px;
+}
+
+#profileLeft, #profileRight {
+	float: left;
+}
+
+#profileLeft {
+	padding: 5px;
+}
+
+#profileLeft img {
+	padding: 2px;
+	width: 244px;
+	border: 1px solid var(--mainColor);
+	border-radius: 3px;
+}
+
+#profileLeft button {
+	font-size: 18px;
+	font-weight: bold;
+	padding: 5px;
+	width: 250px;
+	height: 50px;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	background-color: var(--mainColor);
+	transition-property: background-color;
+	transition-duration: .5s;
+}
+
+#profileLeft button:hover {
+	background-color: var(--mainHover);
+}
+
+#profileRight h2 {
+	font-size: 35px;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+	color: var(--mainColor);
+}
+
+#profileRight hr {
+	margin-top: 5px;
+	width: 743px;
+	border: none;
+	border-bottom: 1px solid var(--mainColor);
+}
+
+#profileRight ul {
+	margin-top: 10px;
+	list-style-type: none;
+	width: 700px;
+}
+
+#profileRight ul li {
+	padding: 5px;
+}
+
+#profileRight ul li span {
+	color: var(--mainColor);
+	font-weight: bold;
 }
