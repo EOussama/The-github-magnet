@@ -118,7 +118,7 @@ header .slogan { text-align: center; }
 #resultsPanel {
 	width: 70%;
 	height: 315px;
-	margin: 20px auto;
+	margin: 40px auto;
 	background-color: aliceblue;
 	border: 1px solid var(--mainColor);
 	border-radius: 3px;
