@@ -59,6 +59,7 @@ header .slogan { text-align: center; }
 	width: 100%;
 	height: 60px;
 	background-color: var(--mainColor);
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 #searchBar ul {
@@ -108,13 +109,9 @@ header .slogan { text-align: center; }
 	border-right: 0px;
 }
 
-#errorPanel span {
-	color: #a22222;
-}
+#errorPanel span { color: #a22222; }
 
-#errorText {
-	margin: 35.4px 0px;
-}
+#errorText { margin: 35.4px 0px; }
 
 /*--------------------------------[Results panel]-----------------------------*/
 
@@ -125,6 +122,8 @@ header .slogan { text-align: center; }
 	background-color: aliceblue;
 	border: 1px solid var(--mainColor);
 	border-radius: 3px;
+	overflow: hidden;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 #profileLeft, #profileRight {
@@ -160,30 +159,51 @@ header .slogan { text-align: center; }
 	background-color: var(--mainHover);
 }
 
+#profileRight ul {
+	margin-top: 3px;
+	list-style-type: none;
+	width: 700px;
+}
+
+#profileRight ul li { padding: 5px; }
+
+#profileRight ul li span {
+	color: var(--mainColor);
+	font-weight: bold;
+}
+
 #profileRight h2 {
+	width: 49%;
 	font-size: 35px;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
 	color: var(--mainColor);
 }
 
 #profileRight hr {
-	margin-top: 5px;
+	position: relative;
+	top: -20px;
 	width: 743px;
 	border: none;
 	border-bottom: 1px solid var(--mainColor);
 }
 
-#profileRight ul {
-	margin-top: 10px;
-	list-style-type: none;
-	width: 700px;
+#profileStats {
+	width: 100%;
+	position: relative;
+	top: 2px;
 }
 
-#profileRight ul li {
-	padding: 5px;
+.badge {
+	font-size: 12px;
+	padding: 2px 5px;
+	background-color: var(--mainColor);
+	border-radius: 3px;
+	color: white;
+	transition-property: background-color;
+	transition-duration: .5s;
+	box-shadow: 0px 1px 0.5px rgba(0, 0, 0, 0.5);
 }
 
-#profileRight ul li span {
-	color: var(--mainColor);
-	font-weight: bold;
-}
+.badge:hover { background-color: var(--mainHover); }
+
+#profileStats a { text-decoration: none; }

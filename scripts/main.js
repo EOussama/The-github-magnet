@@ -36,6 +36,12 @@ $(document).ready(function() {
 					</div>
 					<div id="profileRight">
 						<h2>${user.login}</h2>
+						<div id="profileStats">
+							<a href="https://github.com/${user.login}?tab=repositories" target="_blank"><span class="badge">Repos ${user.public_repos}</span></a>
+							<a href="https://gist.github.com/${user.login}" target="_blank"><span class="badge">Gists ${user.public_gists}</span></a>
+							<a href="https://github.com/${user.login}?tab=followers" target="_blank"><span class="badge">Followers ${user.followers}</span></a>
+							<a href="https://github.com/${user.login}?tab=following" target="_blank"><span class="badge">Following ${user.following}</span></a>
+						</div>
 						<hr>
 						<ul>
 							<li><span><i class="fas fa-user"></i>  Name:</span> ${user.name}<li>
@@ -47,6 +53,7 @@ $(document).ready(function() {
 						</ul>
 					</div>
 				`);
+				console.log(user);
 			});
 		}
 		
