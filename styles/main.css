@@ -127,19 +127,23 @@ header .slogan { text-align: center; }
 }
 
 #profileLeft {
+	box-sizing: border-box;
 	float: left;
 	padding: 5px;
-	width: 250px;
+	width: 30%;
 }
 
 #profileRight {
+	box-sizing: border-box;
 	float: left;
-	min-width:  width: 743px;
+	width: 70%;
+	margin-left: -35px;
 }
 
 #profileLeft img {
 	padding: 2px;
-	width: 244px;
+	width: 100%;
+	max-width: 245px;
 	border: 1px solid var(--mainColor);
 	border-radius: 3px;
 }
@@ -148,7 +152,8 @@ header .slogan { text-align: center; }
 	font-size: 18px;
 	font-weight: bold;
 	padding: 5px;
-	width: 250px;
+	width: 100%;
+	max-width: 250px;
 	height: 50px;
 	border: none;
 	border-radius: 3px;
@@ -158,14 +163,12 @@ header .slogan { text-align: center; }
 	transition-duration: .5s;
 }
 
-#profileLeft button:hover {
-	background-color: var(--mainHover);
-}
+#profileLeft button:hover { background-color: var(--mainHover); }
 
 #profileRight ul {
 	margin-top: 3px;
 	list-style-type: none;
-	width: 700px;
+	width: 100%;
 }
 
 #profileRight ul li { padding: 5px; }
