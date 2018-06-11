@@ -1,7 +1,3 @@
-# The github magnet
----
-
-## Preview
 ![Prev](https://i.imgur.com/o8NPXlC.png)
 
 ## Description
