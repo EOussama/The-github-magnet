@@ -1,21 +1,24 @@
-* {
-    margin: 0;
-    padding: 0;
-	font-family: "Roboto", sans-serif;
-}
-
 :root {
 	--mainColor: #afd2f0;
 	--mainHover: #c5e4ff;
 }
 
-/*-------------------------------[Header]---------------------------------*/
+* {
+    margin: 0;
+	padding: 0;
+	
+	font-family: "Roboto", sans-serif;
+}
+
+/* #region Header*/
 header {
 	width: 100%;
 	height: 250px;
 	padding: 45px 0px 25px 0px;
-	background-color: aliceblue;
+
 	border-bottom: 4px solid #afd2f0;
+
+	background-color: aliceblue;
 	
 	user-select: none;
 	-webkit-user-select: none;
@@ -35,9 +38,11 @@ header h1 span { color: #d04d1e; }
 header small {
 	position: relative;
 	top: 6px;
+
+	color: #585858;
+
 	font-size: 15px;
 	font-weight: 550;
-	color: #585858;
 }
 
 header img { transform: rotate(-15deg); }
@@ -45,19 +50,23 @@ header img { transform: rotate(-15deg); }
 #logoShadow {
 	position: relative;
 	top: -8px;
+
 	width: 150px;
 	height: 10px;
+
 	border-radius: 75px / 5px;
-	background-color: rgba(0, 0, 0, .04);
+
+	background-color: rgba(0, 0, 0, 0.04);
 }
 
 header .slogan { text-align: center; }
+/* #endregion */
 
-/*----------------------------[Search bar]--------------------------------*/
-
+/* #region Search bar */
 #searchBar {
 	width: 100%;
 	height: 60px;
+
 	background-color: var(--mainColor);
 	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
 }
@@ -66,13 +75,16 @@ header .slogan { text-align: center; }
 	position: relative;
 	top: 8px;
 	left: 25px;
+
 	width: 460px;
 	margin: auto;
+
 	list-style-type: none;
 }
 
 #searchBar ul li {
 	float: left;
+
 	padding: 0px 5px;
 }
 
@@ -80,8 +92,10 @@ header .slogan { text-align: center; }
 	width: 360px;
 	height: 30px;
 	padding: 5px 40px 5px 5px;
+
 	border: none;
 	border-radius: 4px;
+
 	font-size: 20px;
 }
 
@@ -89,76 +103,93 @@ header .slogan { text-align: center; }
 	position: relative;
 	top: 5px;
 	left: -45px;
-	font-size: 30px;
+
 	color: var(--mainColor);
+
+	font-size: 30px;
 }
+/* #endregion */
 
-/*---------------------------------[Error panel]-----------------------------*/
-
+/* #region Error panel */
 #resultsPanel, #errorPanel { display: none; }
 
 #errorPanel {
 	height: 100px;
 	width: 100%;
 	margin-top: 30px;
-	background-color: rgba(217, 95, 95, 0.49);
-	color: #c34343;
-	text-align: center;
+
 	border: 1px solid #c34343;
 	border-left: 0px;
 	border-right: 0px;
+
+	background-color: rgba(217, 95, 95, 0.49);
+	color: #c34343;
+
+	text-align: center;
 }
 
 #errorPanel span { color: #a22222; }
 
 #errorText { margin: 35.4px 0px; }
+/* #endregion */
 
-/*--------------------------------[Results panel]-----------------------------*/
-
+/* #region Results panel */
 #resultsPanel {
 	width: 70%;
 	height: 315px;
 	margin: 40px auto;
-	background-color: aliceblue;
+
 	border: 1px solid var(--mainColor);
 	border-radius: 3px;
-	overflow: hidden;
 	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+
+	background-color: aliceblue;
+	overflow: hidden;
 }
 
 #profileLeft {
-	box-sizing: border-box;
 	float: left;
+
 	padding: 5px;
 	width: 30%;
+
+	box-sizing: border-box;
 }
 
 #profileRight {
-	box-sizing: border-box;
 	float: left;
+
 	width: 70%;
 	margin-left: -35px;
+
+	box-sizing: border-box;
 }
 
 #profileLeft img {
 	padding: 2px;
 	width: 100%;
 	max-width: 245px;
+
 	border: 1px solid var(--mainColor);
 	border-radius: 3px;
 }
 
 #profileLeft button {
-	font-size: 18px;
-	font-weight: bold;
 	padding: 5px;
 	width: 100%;
 	max-width: 250px;
 	height: 50px;
+
 	border: none;
 	border-radius: 3px;
-	cursor: pointer;
+
 	background-color: var(--mainColor);
+
+	font-size: 18px;
+	font-weight: bold;
+
+	cursor: pointer;
+
 	transition-property: background-color;
 	transition-duration: .5s;
 }
@@ -167,49 +198,61 @@ header .slogan { text-align: center; }
 
 #profileRight ul {
 	margin-top: 3px;
-	list-style-type: none;
 	width: 100%;
+
+	list-style-type: none;
 }
 
 #profileRight ul li { padding: 5px; }
 
 #profileRight ul li span {
 	color: var(--mainColor);
+
 	font-weight: bold;
 }
 
 #profileRight h2 {
 	width: 49%;
+
+	color: var(--mainColor);
+
 	font-size: 35px;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
-	color: var(--mainColor);
 }
 
 #profileRight hr {
 	position: relative;
 	top: -20px;
+
 	width: 100%;
+
 	border: none;
 	border-bottom: 1px solid var(--mainColor);
 }
 
 #profileStats {
-	width: 100%;
 	position: relative;
 	top: 2px;
+
+	width: 100%;
 }
 
 .badge {
-	font-size: 12px;
 	padding: 2px 5px;
-	background-color: var(--mainColor);
+	
 	border-radius: 3px;
+	box-shadow: 0px 1px 0.5px rgba(0, 0, 0, 0.5);
+	
+	background-color: var(--mainColor);
 	color: white;
+	
+	font-size: 12px;
+	
 	transition-property: background-color;
 	transition-duration: .5s;
-	box-shadow: 0px 1px 0.5px rgba(0, 0, 0, 0.5);
 }
 
 .badge:hover { background-color: var(--mainHover); }
 
 #profileStats a { text-decoration: none; }
+/* #endregion */
