@@ -13,6 +13,7 @@ $(document).ready(function() {
 		{
 			let user = null;
 			
+			$resultsPanel.addClass('loading');
 			$.ajax({
 				url: 'https://api.github.com/users/' + $input,
 				data: {
@@ -24,10 +25,12 @@ $(document).ready(function() {
 					$errorPanel.show();
 
 					$errorText.html(`<i class="fas fa-exclamation-triangle"></i> The user <span>${$input}</span> does not exist!`);
+					$resultsPanel.removeClass('loading');
 				}
 			}).done(function(user) {
 				$errorPanel.hide();
 				$resultsPanel.show();
+				$resultsPanel.removeClass('loading');
 				
 				$profilePanel.html(`
 					<div id="profileLeft">
