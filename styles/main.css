@@ -97,6 +97,9 @@ header .slogan { text-align: center; }
 	border-radius: 4px;
 
 	font-size: 20px;
+
+	transition-property: outline;
+	transition-duration: 0.5s;
 }
 
 #searchBar .fas {

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var
+	const
 		$textBox = $('#textBox'),
 		$resultsPanel = $('#resultsPanel'),
 		$errorPanel = $('#errorPanel'),
@@ -7,7 +7,7 @@ $(document).ready(function() {
 		$profilePanel = $('#profilePanel');
 	
 	$textBox.on('input', function() {
-		let $input = $(this).val().trim();
+		const $input = $(this).val().trim();
 
 		if($input.length > 0)
 		{
@@ -44,20 +44,17 @@ $(document).ready(function() {
 						</div>
 						<hr>
 						<ul>
-							<li><span><i class="fas fa-user"></i>  Name:</span> ${user.name}<li>
-							<li><span><i class="fas fa-compass"></i>  Location:</span> ` + user.location + `<li>
-							<li><span><i class="fas fa-calendar-alt"></i>  Joined at:</span> ${user.created_at}<li>
-							<li><span><i class="fas fa-building"></i>  Company:</span> ${user.company}<li>
-							<li><span><i class="fas fa-at"></i>  E-mail:</span> ${user.email}<li>
-							<li><span><i class="fas fa-info-circle"></i>  Bio:</span> ${user.bio}<li>
+							<li><span><i class="fas fa-user"></i>  Name:</span> ${user.name === null ? "Unknown" : user.name}<li>
+							<li><span><i class="fas fa-compass"></i>  Location:</span> ` + (user.location === null ? "Unknown" : user.location) + `<li>
+							<li><span><i class="fas fa-calendar-alt"></i>  Joined at:</span> ${user.created_at === null ? "Unknown" : user.created_at}<li>
+							<li><span><i class="fas fa-building"></i>  Company:</span> ${user.company === null ? "Unknown" : user.company}<li>
+							<li><span><i class="fas fa-at"></i>  E-mail:</span> ${user.email === null ? "Unknown" : user.email}<li>
+							<li><span><i class="fas fa-info-circle"></i>  Bio:</span> ${user.bio === null ? "Unknown" : user.bio}<li>
 						</ul>
 					</div>
 				`);
-				console.log(user);
 			});
-		}
-		
-		else {
+		} else {
 			$resultsPanel.hide()
 			$errorPanel.hide();
 		}
