@@ -111,7 +111,7 @@ header .slogan { text-align: center; }
 /* #endregion */
 
 /* #region Error panel */
-#resultsPanel, #errorPanel { display: none; }
+#resultsPanel, #errorPanel { display: relative; }
 
 #errorPanel {
 	height: 100px;
@@ -274,7 +274,11 @@ span.badge {
 /* #region Loading */
 section#resultsPanel.loading { filter: blur(5px); }
 
-div.spinner {
+section#resultsPanel.loading > div.spinner {
+	position: absolute;
+	top: 90%;
+	left: 50%;
+
 	width: 50px;
 	height: 50px;
 
