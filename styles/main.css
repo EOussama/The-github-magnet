@@ -135,8 +135,8 @@ header .slogan { text-align: center; }
 
 /* #region Results panel */
 #resultsPanel {
-	width: 70%;
-	height: 315px;
+	width: 1000px;
+	height: auto;
 	margin: 40px auto;
 
 	border: 1px solid var(--mainColor);
@@ -144,41 +144,44 @@ header .slogan { text-align: center; }
 	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
 
 	background-color: aliceblue;
-	overflow: hidden;
+	overflow: visible;
+}
+#profilePanel {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
 }
 
 #profileLeft {
-	float: left;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
 
 	padding: 5px;
-	width: 30%;
-
-	box-sizing: border-box;
 }
 
 #profileRight {
-	float: left;
+	flex: 3;
 
-	width: 70%;
-	margin-left: -35px;
-
-	box-sizing: border-box;
+	padding: 0px 10px;
 }
 
 #profileLeft img {
+	flex: 1;
+
 	padding: 2px;
-	width: 100%;
-	max-width: 245px;
+	height: 250px;
 
 	border: 1px solid var(--mainColor);
 	border-radius: 3px;
 }
 
 #profileLeft button {
-	padding: 5px;
+	flex: 1;
+
 	width: 100%;
-	max-width: 250px;
 	height: 50px;
+	padding: 5px;
 
 	border: none;
 	border-radius: 3px;
@@ -211,34 +214,42 @@ header .slogan { text-align: center; }
 	font-weight: bold;
 }
 
+#profileRight div.profileHeader {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+
+	height: 50px;
+}
+
 #profileRight h2 {
-	width: 49%;
+	align-self: center;
+	flex: 1;
 
 	color: var(--mainColor);
 
 	font-size: 35px;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+	text-align: left;
+}
+
+#profileStats {
+	display: flex;
+	justify-content: flex-end;
+	align-self: center;
+	flex: 2;
 }
 
 #profileRight hr {
-	position: relative;
-	top: -20px;
-
 	width: 100%;
 
 	border: none;
 	border-bottom: 1px solid var(--mainColor);
 }
 
-#profileStats {
-	position: relative;
-	top: 2px;
-
-	width: 100%;
-}
-
-.badge {
+span.badge {
 	padding: 2px 5px;
+	margin-right: 5px;
 	
 	border-radius: 3px;
 	box-shadow: 0px 1px 0.5px rgba(0, 0, 0, 0.5);
