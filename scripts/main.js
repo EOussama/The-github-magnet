@@ -4,7 +4,8 @@ $(document).ready(function() {
 		$resultsPanel = $('#resultsPanel'),
 		$errorPanel = $('#errorPanel'),
 		$errorText = $('#errorText'),
-		$profilePanel = $('#profilePanel');
+		$profilePanel = $('#profilePanel'),
+		$spinner = $('div.spinner');
 	
 	$resultsPanel.hide();
 	$errorPanel.hide();
@@ -16,7 +17,8 @@ $(document).ready(function() {
 		{
 			let user = null;
 			
-			$profilePanel.addClass('loading');
+			$resultsPanel.addClass('loading');
+			$spinner.addClass('loading');
 			$.ajax({
 				url: 'https://api.github.com/users/' + $input,
 				data: {
@@ -28,12 +30,12 @@ $(document).ready(function() {
 					$errorPanel.show();
 
 					$errorText.html(`<i class="fas fa-exclamation-triangle"></i> The user <span>${$input}</span> does not exist!`);
-					$profilePanel.removeClass('loading');
+					$resultsPanel.removeClass('loading');
+					$spinner.removeClass('loading');
 				}
 			}).done(function(user) {
 				$errorPanel.hide();
 				$resultsPanel.show();
-				$profilePanel.removeClass('loading');
 				
 				$profilePanel.html(`
 					<div id="profileLeft">
@@ -61,6 +63,9 @@ $(document).ready(function() {
 						</ul>
 					</div>
 				`);
+
+				$resultsPanel.removeClass('loading');
+				$spinner.removeClass('loading');
 			});
 		} else {
 			$resultsPanel.hide()

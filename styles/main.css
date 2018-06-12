@@ -111,7 +111,7 @@ header .slogan { text-align: center; }
 /* #endregion */
 
 /* #region Error panel */
-#resultsPanel, #errorPanel { display: relative; }
+#resultsPanel, #errorPanel { display: none; }
 
 #errorPanel {
 	height: 100px;
@@ -146,7 +146,7 @@ header .slogan { text-align: center; }
 	background-color: aliceblue;
 	overflow: hidden;
 
-	transition-duration: filter;
+	transition-duration: filter, opacity, background-color;
 	transition-duration: 1s;
 }
 #profilePanel {
@@ -272,11 +272,18 @@ span.badge {
 /* #endregion */
 
 /* #region Loading */
-section#resultsPanel.loading { filter: blur(5px); }
+section#resultsPanel.loading {
+	background-color: var(--mainColor);
 
-section#resultsPanel.loading > div.spinner {
+	filter: blur(5px);
+	opacity: 0.5;
+}
+
+div.spinner {
+	display: none;
+
 	position: absolute;
-	top: 90%;
+	top: 70%;
 	left: 50%;
 
 	width: 50px;
@@ -284,18 +291,21 @@ section#resultsPanel.loading > div.spinner {
 
 	background-image: url('../images/logo.png');
 	background-size: cover;
+	background-repeat: no-repeat;
+}
 
-	z-index: 99;
+div.spinner.loading {
+	display: block;
 
 	animation-name: spin;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
- }
+}
 
- @keyframes spin {
+@keyframes spin {
 	from { transform: rotateZ(0deg); }
 	to { transform: rotateZ(360deg); }
- }
+}
 /* #endregion */
